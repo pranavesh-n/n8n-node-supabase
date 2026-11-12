@@ -1,8 +1,11 @@
+# Graphify
+graphify-out/
+.graphify*
+
 # Dependencies
 node_modules/
 .pnp
 .pnp.js
-
 # Build outputs
 dist/
 *.tsbuildinfo
