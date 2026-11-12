@@ -1,0 +1,16 @@
+{
+  "node": "n8n-nodes-supabase-chat-memory.supabaseChatMemory",
+  "nodeVersion": "1.0",
+  "codexVersion": "1.0",
+  "categories": [
+    "AI",
+    "Database"
+  ],
+  "resources": {
+    "primaryDocumentation": [
+      {
+        "url": "https://supabase.com/docs"
+      }
+    ]
+  }
+}

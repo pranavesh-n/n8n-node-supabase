@@ -1,0 +1,152 @@
+{
+  ".prettierrc.js": {
+    "mtime": 1793532325.4258564,
+    "seen": 1794491000.9580758,
+    "ast_hash": "1fe38abbc7aeddcd5eedece4d1f968a2",
+    "semantic_hash": ""
+  },
+  "eslint.config.mjs": {
+    "mtime": 1793532329.048137,
+    "seen": 1794491000.9580758,
+    "ast_hash": "46ff745bacbfa060cfcd17042cec8f23",
+    "semantic_hash": ""
+  },
+  "package.json": {
+    "mtime": 1794493688.5937798,
+    "seen": 1794494927.4410307,
+    "ast_hash": "9f34f1e9df7faf7556e7b3e711d49e51",
+    "semantic_hash": ""
+  },
+  "scripts/generate-icons.js": {
+    "mtime": 1794493703.3367436,
+    "seen": 1794494927.4410322,
+    "ast_hash": "b32e850c759178987d1a4e307d3a7828",
+    "semantic_hash": ""
+  },
+  "scripts/postbuild.js": {
+    "mtime": 1794493715.864369,
+    "seen": 1794494927.4410338,
+    "ast_hash": "759c6b51bd1fd461ddaabe048c19d7f4",
+    "semantic_hash": ""
+  },
+  "tsconfig.json": {
+    "mtime": 1793532308.7731407,
+    "seen": 1794491000.9580758,
+    "ast_hash": "b7488df9cd729528d98a522a7f5c89c9",
+    "semantic_hash": ""
+  },
+  "credentials/SupabasePostgresConnection.credentials.ts": {
+    "mtime": 1794493739.2037015,
+    "seen": 1794494927.4410155,
+    "ast_hash": "5a16ababfd933c8a8203610de685c0f6",
+    "semantic_hash": ""
+  },
+  "nodes/SupabaseChatMemory/SupabaseChatHistory.ts": {
+    "mtime": 1794493779.3164287,
+    "seen": 1794494927.4410226,
+    "ast_hash": "d51e93d655741dfe995195d21fda4416",
+    "semantic_hash": ""
+  },
+  "nodes/SupabaseChatMemory/SupabaseChatMemory.node.json": {
+    "mtime": 1794493804.0613108,
+    "seen": 1794494927.4410243,
+    "ast_hash": "14c57d0dcaec183ec2851e9b9db6afe4",
+    "semantic_hash": ""
+  },
+  "nodes/SupabaseChatMemory/SupabaseChatMemory.node.ts": {
+    "mtime": 1794493864.6602497,
+    "seen": 1794494927.4410255,
+    "ast_hash": "6b58ad74ff79dcf4fb46407c236978a7",
+    "semantic_hash": ""
+  },
+  "nodes/SupabaseChatMemory/db.ts": {
+    "mtime": 1794493763.4976006,
+    "seen": 1794494927.4410272,
+    "ast_hash": "c0435f2520b630ce87235eae22f9717c",
+    "semantic_hash": ""
+  },
+  "nodes/SupabaseChatMemory/types.ts": {
+    "mtime": 1794493727.855534,
+    "seen": 1794494927.4410286,
+    "ast_hash": "9d4d23e3c9b15863f302342eb52a7c47",
+    "semantic_hash": ""
+  },
+  "tests/chatMemory.test.mjs": {
+    "mtime": 1794494599.5665119,
+    "seen": 1794494927.441035,
+    "ast_hash": "cd729ca4f8946375bcb72ab9e24fb2d0",
+    "semantic_hash": ""
+  },
+  "tests/credentials.test.mjs": {
+    "mtime": 1794494489.7855482,
+    "seen": 1794494927.4410365,
+    "ast_hash": "203843246ac1ee119c3fcda599f91da7",
+    "semantic_hash": ""
+  },
+  "tests/db.test.mjs": {
+    "mtime": 1794494532.976896,
+    "seen": 1794494927.441038,
+    "ast_hash": "b31382a05f63800ed509dc01b0f9a12d",
+    "semantic_hash": ""
+  },
+  "tests/node.test.mjs": {
+    "mtime": 1794494660.037122,
+    "seen": 1794494927.4410388,
+    "ast_hash": "a4d6bea98673b5da4a52d783da432b29",
+    "semantic_hash": ""
+  },
+  "tests/table.test.mjs": {
+    "mtime": 1794494561.5534616,
+    "seen": 1794494927.44104,
+    "ast_hash": "009751c8d3e9c4774bad8373e7dc7f55",
+    "semantic_hash": ""
+  },
+  "LICENSE.md": {
+    "mtime": 1794493956.0931764,
+    "seen": 1794494927.4410436,
+    "ast_hash": "ad515bc6dc9de4680089e116ce42910f",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1794493978.328182,
+    "seen": 1794494927.441045,
+    "ast_hash": "4745a8ef47a1e70fe60f2e524b1ba55a",
+    "semantic_hash": ""
+  },
+  "nodes/SupabaseChatMemory/supabase.dark.png": {
+    "mtime": 1794492414.2006457,
+    "seen": 1794494927.4410465,
+    "ast_hash": "2f402240691967f71d7b843b17790050",
+    "semantic_hash": ""
+  },
+  "nodes/SupabaseChatMemory/supabase.dark.svg": {
+    "mtime": 1794492414.1996534,
+    "seen": 1794494927.441048,
+    "ast_hash": "de5e15d3e0c647341546485e0242c673",
+    "semantic_hash": ""
+  },
+  "nodes/SupabaseChatMemory/supabase.png": {
+    "mtime": 1794492414.1986344,
+    "seen": 1794494927.441049,
+    "ast_hash": "2f402240691967f71d7b843b17790050",
+    "semantic_hash": ""
+  },
+  "nodes/SupabaseChatMemory/supabase.svg": {
+    "mtime": 1794492414.197117,
+    "seen": 1794494927.4410508,
+    "ast_hash": "de5e15d3e0c647341546485e0242c673",
+    "semantic_hash": ""
+  },
+  "temp_icon_256.png": {
+    "mtime": 1794492380.0571296,
+    "seen": 1794494927.441052,
+    "ast_hash": "2f402240691967f71d7b843b17790050",
+    "semantic_hash": ""
+  },
+  "package-lock.json": {
+    "mtime": 1794493654.75035,
+    "seen": 1794494927.4410534,
+    "ast_hash": "96eae3d4c6535b329ca99e44dca5000f",
+    "semantic_hash": ""
+  }
+}

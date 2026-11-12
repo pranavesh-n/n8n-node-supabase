@@ -1,0 +1,13 @@
+{
+  "0": "package.json",
+  "1": "node.test.mjs",
+  "2": "compilerOptions",
+  "3": "db.ts",
+  "4": "postbuild.js",
+  "5": "n8n-nodes-supabase-chat-memory",
+  "6": "SupabaseChatHistory.ts",
+  "7": "scripts",
+  "8": "SupabaseChatHistory",
+  "9": "n8n",
+  "10": ".prettierrc.js"
+}

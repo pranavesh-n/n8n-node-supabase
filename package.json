@@ -1,0 +1,69 @@
+{
+  "name": "n8n-nodes-supabase-chat-memory",
+  "version": "0.1.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "n8n community node for persistent AI chat memory using Supabase PostgreSQL",
+  "license": "MIT",
+  "homepage": "https://github.com/pranavesh-n/n8n-nodes-supabase-chat-memory",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "supabase",
+    "postgres",
+    "postgresql",
+    "chat-memory",
+    "ai",
+    "ai-agent",
+    "langchain"
+  ],
+  "author": {
+    "name": "Pranavesh N",
+    "email": "pranaveshnandakumar@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pranavesh-n/n8n-nodes-supabase-chat-memory.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && node scripts/postbuild.js",
+    "build:watch": "tsc --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "release": "release-it",
+    "prepublishOnly": "npm run build",
+    "test": "node --test tests/**/*.test.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "strict": true,
+    "credentials": [
+      "dist/credentials/SupabasePostgresConnection.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/SupabaseChatMemory/SupabaseChatMemory.node.js"
+    ],
+    "aiNodeSdkVersion": 1
+  },
+  "dependencies": {
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@n8n/node-cli": "*",
+    "@types/pg": "^8.11.10",
+    "eslint": "9.32.0",
+    "n8n-workflow": "^2.16.0",
+    "prettier": "3.6.2",
+    "release-it": "^21.1.0",
+    "typescript": "5.9.2"
+  },
+  "peerDependencies": {
+    "@n8n/ai-node-sdk": "*",
+    "n8n-workflow": "*"
+  }
+}
