@@ -6,7 +6,7 @@
   },
   "description": "n8n community node for persistent AI chat memory using Supabase PostgreSQL",
   "license": "MIT",
-  "homepage": "https://github.com/pranavesh-n/n8n-nodes-supabase-chat-memory",
+  "homepage": "https://github.com/pranavesh-n/n8n-node-supabase",
   "keywords": [
     "n8n-community-node-package",
     "n8n",
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pranavesh-n/n8n-nodes-supabase-chat-memory.git"
+    "url": "git+https://github.com/pranavesh-n/n8n-node-supabase.git"
   },
   "main": "index.js",
   "scripts": {
