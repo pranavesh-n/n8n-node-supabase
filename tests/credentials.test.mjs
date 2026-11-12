@@ -13,8 +13,8 @@ describe('SupabasePostgresConnection Credentials', () => {
 			'https://supabase.com/docs/guides/database/connecting-to-postgres',
 		);
 		assert.deepEqual(credentials.icon, {
-			light: 'file:supabase.svg',
-			dark: 'file:supabase.dark.svg',
+			light: 'file:supabase-chat-memory.svg',
+			dark: 'file:supabase-chat-memory.dark.svg',
 		});
 	});
 

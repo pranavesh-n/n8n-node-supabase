@@ -18,15 +18,23 @@ const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://
 </svg>`;
 
 const iconLocations = [
+  'nodes/SupabaseChatMemory/supabase-chat-memory.svg',
+  'nodes/SupabaseChatMemory/supabase-chat-memory.dark.svg',
   'nodes/SupabaseChatMemory/supabase.svg',
   'nodes/SupabaseChatMemory/supabase.dark.svg',
+  'credentials/supabase-chat-memory.svg',
+  'credentials/supabase-chat-memory.dark.svg',
   'credentials/supabase.svg',
   'credentials/supabase.dark.svg',
 ];
 
 const pngLocations = [
+  'nodes/SupabaseChatMemory/supabase-chat-memory.png',
+  'nodes/SupabaseChatMemory/supabase-chat-memory.dark.png',
   'nodes/SupabaseChatMemory/supabase.png',
   'nodes/SupabaseChatMemory/supabase.dark.png',
+  'credentials/supabase-chat-memory.png',
+  'credentials/supabase-chat-memory.dark.png',
   'credentials/supabase.png',
   'credentials/supabase.dark.png',
 ];

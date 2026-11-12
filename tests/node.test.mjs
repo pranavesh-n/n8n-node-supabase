@@ -20,8 +20,8 @@ describe('SupabaseChatMemory Node Definition', () => {
 			'Stores chat history in Supabase PostgreSQL partitioned by session ID',
 		);
 		assert.deepEqual(node.description.icon, {
-			light: 'file:supabase.svg',
-			dark: 'file:supabase.dark.svg',
+			light: 'file:supabase-chat-memory.svg',
+			dark: 'file:supabase-chat-memory.dark.svg',
 		});
 	});
 

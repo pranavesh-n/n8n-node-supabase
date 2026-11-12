@@ -12,8 +12,8 @@ export class SupabasePostgresConnection implements ICredentialType {
 	documentationUrl = 'https://supabase.com/docs/guides/database/connecting-to-postgres';
 
 	icon: Icon = {
-		light: 'file:supabase.svg',
-		dark: 'file:supabase.dark.svg',
+		light: 'file:supabase-chat-memory.svg',
+		dark: 'file:supabase-chat-memory.dark.svg',
 	};
 
 	properties: INodeProperties[] = [

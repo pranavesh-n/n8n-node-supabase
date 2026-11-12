@@ -15,6 +15,10 @@ fs.mkdirSync(distNodeDir, { recursive: true });
 
 // 2. Copy verified icons to dist/credentials/ and dist/nodes/SupabaseChatMemory/
 const iconFiles = [
+  'supabase-chat-memory.svg',
+  'supabase-chat-memory.dark.svg',
+  'supabase-chat-memory.png',
+  'supabase-chat-memory.dark.png',
   'supabase.svg',
   'supabase.dark.svg',
   'supabase.png',

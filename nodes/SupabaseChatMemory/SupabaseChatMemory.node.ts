@@ -17,8 +17,8 @@ export class SupabaseChatMemory implements INodeType {
 		displayName: 'Supabase Chat Memory',
 		name: 'supabaseChatMemory',
 		icon: {
-			light: 'file:supabase.svg',
-			dark: 'file:supabase.dark.svg',
+			light: 'file:supabase-chat-memory.svg',
+			dark: 'file:supabase-chat-memory.dark.svg',
 		},
 		group: ['transform'],
 		version: 1,
