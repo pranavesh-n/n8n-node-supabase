@@ -4,6 +4,9 @@ const { execSync } = require('child_process');
 
 const root = path.resolve(__dirname, '..');
 
+// 0. Generate icons from source image
+require('./generate-icons.js');
+
 // 1. Ensure dist target directories exist
 const distCredDir = path.join(root, 'dist', 'credentials');
 const distNodeDir = path.join(root, 'dist', 'nodes', 'SupabaseChatMemory');

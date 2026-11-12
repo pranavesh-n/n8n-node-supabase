@@ -2,57 +2,57 @@ const fs = require('fs');
 const path = require('path');
 
 const root = path.resolve(__dirname, '..');
-const tempIconPath = path.join(root, 'temp_icon_256.png');
+const uploadedPngPath = 'C:/Users/Pranavesh/.gemini/antigravity-cli/brain/1c3f1e3c-9bae-43d0-af81-ca4eb04a7467/.user_uploaded/uploaded_media_1794502192325.png';
 
-const targets = [
-  'credentials/supabase.svg',
-  'credentials/supabase.dark.svg',
+if (!fs.existsSync(uploadedPngPath)) {
+  console.error(`Uploaded PNG not found at: ${uploadedPngPath}`);
+  process.exit(1);
+}
+
+const pngBuffer = fs.readFileSync(uploadedPngPath);
+const base64Png = pngBuffer.toString('base64');
+const dataUri = `data:image/png;base64,${base64Png}`;
+
+const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256" width="256" height="256">
+  <image width="256" height="256" href="${dataUri}" xlink:href="${dataUri}"/>
+</svg>`;
+
+const iconLocations = [
   'nodes/SupabaseChatMemory/supabase.svg',
   'nodes/SupabaseChatMemory/supabase.dark.svg',
+  'credentials/supabase.svg',
+  'credentials/supabase.dark.svg',
 ];
 
-let pngBytes = null;
-let svgContent = null;
+const pngLocations = [
+  'nodes/SupabaseChatMemory/supabase.png',
+  'nodes/SupabaseChatMemory/supabase.dark.png',
+  'credentials/supabase.png',
+  'credentials/supabase.dark.png',
+];
 
-for (const relPath of targets) {
-  const fullPath = path.join(root, relPath);
-  const pngPath = fullPath.replace(/\.svg$/, '.png');
+// Write SVGs
+for (const rel of iconLocations) {
+  const dest = path.join(root, rel);
+  fs.mkdirSync(path.dirname(dest), { recursive: true });
+  fs.writeFileSync(dest, svgContent, 'utf8');
 
-  // Preserve verified icons if they already exist
-  if (fs.existsSync(fullPath) && fs.existsSync(pngPath)) {
-    console.log(`Preserving verified icon: ${relPath}`);
-  } else {
-    if (!pngBytes && fs.existsSync(tempIconPath)) {
-      pngBytes = fs.readFileSync(tempIconPath);
-      const base64Data = pngBytes.toString('base64');
-      svgContent = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
-  <title>Supabase</title>
-  <image href="data:image/png;base64,${base64Data}" width="256" height="256" />
-</svg>
-`;
-    }
-
-    if (svgContent && pngBytes) {
-      fs.mkdirSync(path.dirname(fullPath), { recursive: true });
-      fs.writeFileSync(fullPath, svgContent, 'utf8');
-      fs.writeFileSync(pngPath, pngBytes);
-      console.log(`Generated icon: ${relPath}`);
-    }
-  }
-
-  // Ensure copied to dist/ if dist destination folder exists
-  const distSvg = path.join(root, 'dist', relPath);
-  const distPng = distSvg.replace(/\.svg$/, '.png');
-  const distDir = path.dirname(distSvg);
-
-  if (fs.existsSync(distDir)) {
-    if (fs.existsSync(fullPath)) {
-      fs.copyFileSync(fullPath, distSvg);
-    }
-    if (fs.existsSync(pngPath)) {
-      fs.copyFileSync(pngPath, distPng);
-    }
+  const distDest = path.join(root, 'dist', rel);
+  if (fs.existsSync(path.dirname(distDest))) {
+    fs.writeFileSync(distDest, svgContent, 'utf8');
   }
 }
 
-console.log('Icon preservation and verification check complete.');
+// Write PNGs
+for (const rel of pngLocations) {
+  const dest = path.join(root, rel);
+  fs.mkdirSync(path.dirname(dest), { recursive: true });
+  fs.copyFileSync(uploadedPngPath, dest);
+
+  const distDest = path.join(root, 'dist', rel);
+  if (fs.existsSync(path.dirname(distDest))) {
+    fs.copyFileSync(uploadedPngPath, distDest);
+  }
+}
+
+console.log('Successfully generated custom logo icons (SVG & PNG).');
