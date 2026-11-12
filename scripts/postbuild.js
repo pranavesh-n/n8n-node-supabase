@@ -53,10 +53,14 @@ if (fs.existsSync(n8nCoreMetadataBin)) {
   }
 }
 
-// 5. Ensure icon URLs in dist/types/nodes.json and dist/types/credentials.json have leading slash
-const ensureLeadingSlash = (p) => {
+// 5. Fix icon URLs in dist/types/nodes.json and dist/types/credentials.json
+// n8n editor evaluates: p = e => /^(https?:)?\/\//.test(e) ? e : baseUrl + e
+// When iconUrl starts with leading slash ('/icons/...'), baseUrl ('/') + e results in '//icons/...'
+// which the browser interprets as a protocol-relative domain request (http://icons/...), causing failure.
+// Removing the leading slash ('icons/...') results in '/icons/...' which properly resolves on localhost:5678.
+const stripLeadingSlash = (p) => {
   if (typeof p !== 'string') return p;
-  return p.startsWith('/') ? p : '/' + p;
+  return p.replace(/^\/+/, '');
 };
 
 const fixIconsInJson = (filePath) => {
@@ -67,13 +71,13 @@ const fixIconsInJson = (filePath) => {
       if (!obj || typeof obj !== 'object') return;
       if (obj.iconUrl) {
         if (typeof obj.iconUrl === 'string') {
-          obj.iconUrl = ensureLeadingSlash(obj.iconUrl);
+          obj.iconUrl = stripLeadingSlash(obj.iconUrl);
         } else if (typeof obj.iconUrl === 'object') {
           if (typeof obj.iconUrl.light === 'string') {
-            obj.iconUrl.light = ensureLeadingSlash(obj.iconUrl.light);
+            obj.iconUrl.light = stripLeadingSlash(obj.iconUrl.light);
           }
           if (typeof obj.iconUrl.dark === 'string') {
-            obj.iconUrl.dark = ensureLeadingSlash(obj.iconUrl.dark);
+            obj.iconUrl.dark = stripLeadingSlash(obj.iconUrl.dark);
           }
         }
       }
@@ -86,7 +90,7 @@ const fixIconsInJson = (filePath) => {
     }
 
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
-    console.log(`Ensured leading slash in ${path.relative(root, filePath)}`);
+    console.log(`Normalized icon URLs in ${path.relative(root, filePath)}`);
   } catch (err) {
     console.warn(`Could not update ${filePath}:`, err.message);
   }
